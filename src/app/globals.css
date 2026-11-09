@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F5EF;
+  --color-ivory-light: #FDFAF5;
+  --color-ivory-dark: #ECE5D8;
+
+  --color-charcoal: #252522;
+  --color-charcoal-light: #3A3A35;
+  --color-charcoal-muted: #575750;
+  --color-charcoal-dark: #171715;
+
+  --color-olive: #747B60;
+  --color-olive-light: #8E9678;
+  --color-olive-dark: #585E48;
+
+  --color-copper: #B8794D;
+  --color-copper-light: #D08E62;
+  --color-copper-dark: #965E38;
+
+  --font-serif: var(--font-playfair), "Times New Roman", Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #F8F5EF;
+  --foreground: #252522;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Accessible Dialog scroll containment */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(37, 37, 34, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8794D;
+}
